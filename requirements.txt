@@ -12,15 +12,5 @@ selenium==4.25.0
 selenium-stealth==1.0.6
 seleniumbase==4.31.3
 service-identity==24.1.0
-streamlit==1.39.0
-timm==1.0.7
-toml==0.10.2
-Twisted==23.10.0rc1
-twisted-iocpsupport==1.0.4
 urllib3==2.0.1
 webdriver-manager==4.0.1
-yarg==0.1.9
-yarl==1.9.4
-ydata-profiling==4.10.0
-zipp==3.19.2
-zope.interface==6.4.post2
