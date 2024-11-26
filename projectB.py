@@ -16,7 +16,7 @@ st.title('Jumia Product Analysis')
 st.sidebar.title('Navigation')
 option = st.sidebar.radio(
     'Choose a section:',
-    ('Raw Data', 'Top Discounts Visualization', 'Summary Statistics')
+    ('Raw Data', 'Top Discounts Visualization', 'Summary Statistics', 'To Be Promoted')
 )
 
 # Display content based on selection
@@ -52,3 +52,25 @@ elif option == 'Top Discounts Visualization':
 elif option == 'Summary Statistics':
     st.subheader('Summary Statistics of Discounts')
     st.write(Jumia['numeric_change'].describe())
+
+elif option == 'To Be Promoted':
+    st.subheader("Items that deserve a Promotion!")
+    
+    # List of items to be promoted
+    promoted_items = [
+        "OTG Type C To USB Converter Adapter To Connect...",
+        "P9 Bluetooth Wireless Headphone - Blue4",
+        "JOYROOM JR-QP191 Power Bank 10000 MAh Fast Charging",
+        "Iphone Charger Head - 20w - Type-C Port - White",
+        "Mobile Phone Holder With Base - Black",
+        "Taha Offer Waterproof Mobile Phone Case 1 Piece",
+        "Wireless Headset M90 With Power Bank-Black",
+        "T900 Ultra Smart Watch 49mm 2.09 Infinite Display",
+        "JOYROOM JR-OK3 Rotation & Adjustable Length Cable",
+        "120W 6A Fast Charging Cable - Zinc Alloy 3.3ft",
+        "OPPO Reno 11F Full Protection Case Visa Card &..."
+    ]
+    
+    # Display the list
+    for item in promoted_items:
+        st.write(f"- {item}")
