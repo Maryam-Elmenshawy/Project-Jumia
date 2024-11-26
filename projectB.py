@@ -12,9 +12,9 @@ Jumia['numeric_change'] = Jumia['Discount %'].str.replace('%', '', regex=True).a
 # Streamlit UI
 st.title('Jumia Product Analysis')
 
-# Sidebar navigation
+# Sidebar navigation with radio buttons
 st.sidebar.title('Navigation')
-option = st.sidebar.selectbox(
+option = st.sidebar.radio(
     'Choose a section:',
     ('Raw Data', 'Top Discounts Visualization', 'Summary Statistics')
 )
