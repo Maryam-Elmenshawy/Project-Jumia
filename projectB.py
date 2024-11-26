@@ -16,12 +16,21 @@ st.title('Jumia Product Analysis')
 st.subheader('Raw Data')
 st.write(Jumia.head())
 
-# Plotting Top Products with Largest Discounts
-st.subheader('Top Products with Largest Discounts')
+# Sort by % change and select top 10
 top_discounts = Jumia.nlargest(10, 'numeric_change')
+# Streamlit title and subheader
+st.title("Top Discounts Visualization")
+st.subheader("Top 10 Products with Largest Discounts")
+
+# Create the figure and plot
 fig, ax = plt.subplots(figsize=(10, 6))
-sns.barplot(x='Product Name', y='Discount %', data=top_discounts, ax=ax)
+sns.barplot(x='Product Name', y='numeric_change', data=top_discounts, palette='viridis', ax=ax)
+ax.set_title('Top 10 Products with Largest Discounts')
+ax.set_xlabel('Product Name')
+ax.set_ylabel('% Change')
 plt.xticks(rotation=45, ha='right')
+
+# Display the plot in Streamlit
 st.pyplot(fig)
 
 # Show summary statistics
