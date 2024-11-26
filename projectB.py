@@ -16,7 +16,7 @@ st.title('Jumia Product Analysis')
 st.sidebar.title('Navigation')
 option = st.sidebar.radio(
     'Choose a section:',
-    ('Raw Data', 'Top Discounts Visualization', 'Summary Statistics', 'To Be Promoted')
+    ('Raw Data', 'Top Discounts Visualization', 'Summary Statistics', 'To Be Promoted', 'MongoDB')
 )
 
 # Display content based on selection
@@ -74,3 +74,9 @@ elif option == 'To Be Promoted':
     # Display the list
     for item in promoted_items:
         st.write(f"- {item}")
+
+elif option == 'MongoDB':
+    st.subheader('MongoDB Section')
+    st.markdown("""
+        [Jumia Data Base](https://cloud.mongodb.com/v2/673a260b07aa7d67bfcce2e6#/metrics/replicaSet/673a26d823f8100527987c45/explorer/jumia/products/find)
+    """)
