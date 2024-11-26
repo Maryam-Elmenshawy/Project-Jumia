@@ -26,15 +26,22 @@ st.subheader("Top 10 Products with Largest Discounts")
 # Create the figure and plot
 fig, ax = plt.subplots(figsize=(10, 6))
 sns.barplot(x='Product Name', y='numeric_change', data=top_discounts, palette='viridis', ax=ax)
-ax.set_title('Top 10 Products with Largest Discounts')
-ax.set_xlabel('Product Name')
-ax.set_ylabel('% Change')
+ax.set_title('Top 10 Products with Largest Discounts', fontsize=16)
+ax.set_xlabel('Product Name', fontsize=12)
+ax.set_ylabel('% Change', fontsize=12)
 
 # Rotate x-axis labels
 ax.tick_params(axis='x', rotation=45)
 
+# Adjust layout to fix alignment issues
+plt.tight_layout()
+
+# Optional: Fine-tune the spacing manually if needed
+fig.subplots_adjust(bottom=0.25)  # Adjust the bottom margin if labels overlap
+
 # Display the plot in Streamlit
 st.pyplot(fig)
+
 
 # Show summary statistics
 st.subheader('Summary Statistics of Discounts')
